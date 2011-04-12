@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+    <LinearLayout
+      android:focusable="true" android:focusableInTouchMode="true"
+      android:layout_width="0px" android:layout_height="0px"/>
+    
+     
+    <EditText android:id="@+id/filePath" android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="gruppe_ca6_t2.csv" android:textSize="10px" android:nextFocusUp="@+id/filePath" android:nextFocusDown="@+id/epsilon"></EditText>
+    <!-- 
+    <TextView android:text="console" android:id="@+id/console" android:layout_width="fill_parent" android:layout_height="60dip" android:inputType="textMultiLine"></TextView>
+    -->
+    
+    <TableLayout android:id="@+id/tL01" android:layout_width="fill_parent" android:layout_height="wrap_content">
+      <TableRow android:id="@+id/tR02" android:layout_width="wrap_content" android:layout_height="wrap_content">
+          <TextView android:text="Epsilon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
+          <TextView android:text="LearningRate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
+          <TextView android:text="Training" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
+      </TableRow>
+      <TableRow android:id="@+id/tR03" android:layout_width="wrap_content" android:layout_height="wrap_content">
+          <EditText android:text="1.0" android:id="@+id/epsilon" android:layout_width="wrap_content" android:layout_height="40px" android:layout_weight="1" android:inputType="numberDecimal" android:textSize="10px"></EditText>
+          <EditText android:text="0.0" android:id="@+id/learningRate" android:layout_width="wrap_content" android:layout_height="40px" android:layout_weight="1" android:inputType="numberDecimal" android:textSize="10px"></EditText>
+          <Button android:id="@+id/start" android:layout_width="100dip" android:layout_height="34px" android:layout_weight="1" android:text="start" android:onClick="start"></Button>
+      </TableRow>
+    </TableLayout>
+    
+    <View
+          android:layout_width="fill_parent"
+          android:layout_height="1dip"
+          android:background="#66666610"
+          android:layout_marginLeft="6dip"
+          android:layout_marginRight="6dip"
+          android:layout_marginTop="3dip"
+          android:layout_marginBottom="6dip" >
+    </View>
+    
+    <ProgressBar android:id="@+id/progressBar1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:visibility="gone"></ProgressBar>
+    
+    <TableLayout android:id="@+id/tL02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:visibility="gone">
+      <TableRow android:id="@+id/tR02" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@+id/ask" android:layout_width="100dip" android:layout_height="40dip" android:text="ask" android:onClick="ask"></Button>
+        <TextView android:id="@+id/result" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="result" android:layout_marginLeft="60dip"></TextView>
+      </TableRow>
+    </TableLayout>
+    
+    <View
+          android:layout_width="fill_parent"
+          android:layout_height="1dip"
+          android:background="#66666610"
+          android:layout_marginLeft="6dip"
+          android:layout_marginRight="6dip"
+          android:layout_marginTop="3dip"
+          android:layout_marginBottom="6dip" >
+    </View>
+    
+    <ScrollView android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/configure" android:layout_height="fill_parent" android:layout_width="fill_parent" android:visibility="visible">
+            <TableLayout android:stretchColumns="0" android:id="@+id/tableLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="Anlauflänge" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                    <TextView android:text="Result" android:layout_height="wrap_content" android:textStyle="bold" android:layout_width="wrap_content" android:id="@+id/Spinner01Result"></TextView>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:prompt="@string/Anlauflaenge_prompt" android:layout_width="fill_parent" android:layout_height="50px" android:layout_span="2" android:id="@+id/Spinner01"></Spinner>
+                </TableRow>
+                
+                <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="Richtung" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                    <TextView android:text="Result" android:layout_height="wrap_content" android:textStyle="bold" android:layout_width="wrap_content" android:id="@+id/Spinner02Result"></TextView>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow4" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:prompt="@string/Richtung_prompt" android:layout_width="fill_parent" android:layout_height="50px" android:layout_span="2" android:id="@+id/Spinner02"></Spinner>
+                </TableRow>
+                
+                <TableRow android:id="@+id/tableRow5" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="Verzögerung" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                    <TextView android:text="Result" android:layout_height="wrap_content" android:textStyle="bold" android:layout_width="wrap_content" android:id="@+id/Spinner03Result"></TextView>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow6" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:prompt="@string/Verzoegerung_prompt" android:layout_width="fill_parent" android:layout_height="50px" android:layout_span="2" android:id="@+id/Spinner03"></Spinner>
+                </TableRow>
+                
+                <TableRow android:id="@+id/tableRow6" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="Gefoult" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                    <TextView android:text="Result" android:layout_height="wrap_content" android:textStyle="bold" android:layout_width="wrap_content" android:id="@+id/Spinner04Result"></TextView>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow7" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:prompt="@string/Gefoult_prompt" android:layout_width="fill_parent" android:layout_height="50px" android:layout_span="2" android:id="@+id/Spinner04"></Spinner>
+                </TableRow>
+                
+                <TableRow android:id="@+id/tableRow8" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="Ort" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                    <TextView android:text="Result" android:layout_height="wrap_content" android:textStyle="bold" android:layout_width="wrap_content" android:id="@+id/Spinner05Result"></TextView>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow9" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:prompt="@string/Ort_prompt" android:layout_width="fill_parent" android:layout_height="50px" android:layout_span="2" android:id="@+id/Spinner05"></Spinner>
+                </TableRow>
+                
+                <TableRow android:id="@+id/tableRow10" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="Kurve" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                    <TextView android:text="Result" android:layout_height="wrap_content" android:textStyle="bold" android:layout_width="wrap_content" android:id="@+id/Spinner06Result"></TextView>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow11" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:prompt="@string/Kurve_prompt" android:layout_width="fill_parent" android:layout_height="50px" android:layout_span="2" android:id="@+id/Spinner06"></Spinner>
+                </TableRow>
+                
+                <TableRow android:id="@+id/tableRow12" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="Wichtig" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                    <TextView android:text="Result" android:layout_height="wrap_content" android:textStyle="bold" android:layout_width="wrap_content" android:id="@+id/Spinner07Result"></TextView>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow13" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:prompt="@string/Wichtig_prompt" android:layout_width="fill_parent" android:layout_height="50px" android:layout_span="2" android:id="@+id/Spinner07"></Spinner>
+                </TableRow>
+                
+                <TableRow android:id="@+id/tableRow14" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="Zuschauer" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                    <TextView android:text="Result" android:layout_height="wrap_content" android:textStyle="bold" android:layout_width="wrap_content" android:id="@+id/Spinner08Result"></TextView>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow15" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:prompt="@string/Zuschauer_prompt" android:layout_width="fill_parent" android:layout_height="50px" android:layout_span="2" android:id="@+id/Spinner08"></Spinner>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

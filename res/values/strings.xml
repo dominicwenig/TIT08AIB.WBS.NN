@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PenaltyShot</string>
+    
+    <string-array name="Anlauflaenge">
+        <item>kurz</item>
+        <item>mittel</item>
+        <item>lang</item>
+    </string-array>
+    <string name="Anlauflaenge_prompt">Auswahl Anlauflänge</string>
+    
+    <string-array name="Richtung">
+        <item>vonLinks</item>
+        <item>mitte</item>
+        <item>vonRecht</item>
+    </string-array>
+    <string name="Richtung_prompt">Auswahl Richtung</string>
+    
+    <string-array name="Verzoegerung">
+        <item>ja</item>
+        <item>nein</item>
+    </string-array>
+    <string name="Verzoegerung_prompt">Auswahl Verzögerung</string>
+    
+    <string-array name="Gefoult">
+        <item>ja</item>
+        <item>nein</item>
+    </string-array>
+    <string name="Gefoult_prompt">Auswahl Gefoult</string>
+    
+    <string-array name="Ort">
+        <item>Auswaerts</item>
+        <item>Heimspiel</item>
+    </string-array>
+    <string name="Ort_prompt">Auswahl Ort</string>
+    
+    <string-array name="Kurve">
+        <item>vorGeger</item>
+        <item>vorFans</item>
+    </string-array>
+    <string name="Kurve_prompt">Auswahl Kurve</string>
+    
+    <string-array name="Wichtig">
+        <item>ja</item>
+        <item>nein</item>
+    </string-array>
+    <string name="Wichtig_prompt">Auswahl Wichtig</string>
+    
+    <string-array name="Zuschauer">
+        <item>5000</item>
+        <item>10000</item>
+        <item>15000</item>
+        <item>20000</item>
+        <item>25000</item>
+        <item>30000</item>
+        <item>35000</item>
+        <item>40000</item>
+    </string-array>
+    <string name="Zuschauer_prompt">Auswahl Zuschauer</string>
+    
+</resources>
