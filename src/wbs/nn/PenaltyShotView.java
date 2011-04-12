@@ -330,6 +330,14 @@ public class PenaltyShotView extends Activity {
 		this.mPos8 = p.getInt(POSITION_KEY + "8", PenaltyShotView.DEFAULT_POSITION);
 		this.mSelection8 = p.getString(SELECTION_KEY + "8", "");
 		
+		TextView filePath = (TextView) findViewById(R.id.filePath);
+		TextView epsilon = (TextView) findViewById(R.id.epsilon);
+		TextView learningRate = (TextView) findViewById(R.id.learningRate);
+		  
+		filePath.setText(p.getString("FilePath", "gruppe_ca6_t2.csv"));
+		epsilon.setText(p.getString("Epsilon", "1.0"));
+		learningRate.setText(p.getString("LearningRate", "0.0"));
+		
 		return (p.contains(POSITION_KEY));
 	}
 
@@ -362,7 +370,16 @@ public class PenaltyShotView extends Activity {
 		
 		e.putInt(POSITION_KEY + "8", this.mPos2);
 		e.putString(SELECTION_KEY + "8", this.mSelection2);
-
+		
+		//persist the edit text fields
+		TextView filePath = (TextView) findViewById(R.id.filePath);
+		TextView epsilon = (TextView) findViewById(R.id.epsilon);
+		TextView learningRate = (TextView) findViewById(R.id.learningRate);
+		  
+		e.putString("FilePath", filePath.getText().toString());
+		e.putString("Epsilon", epsilon.getText().toString());
+		e.putString("LearningRate", learningRate.getText().toString());
+		
 		return (e.commit());
 	}
 
@@ -452,4 +469,5 @@ public class PenaltyShotView extends Activity {
 			Toast.makeText(this, "Wrong Input Data.", Toast.LENGTH_LONG).show();
 		}
 	}
+	
 }
