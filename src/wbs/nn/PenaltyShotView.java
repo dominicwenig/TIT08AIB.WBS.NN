@@ -55,6 +55,7 @@ public class PenaltyShotView extends Activity {
 	protected ArrayAdapter<CharSequence> mAdapter8;
 	
 	private GoalKeeperCheatSheetNeuronalNetwork NN;
+	private boolean trained = false;
 	
 	public static final int DEFAULT_POSITION = 0;
 	public static final String PREFERENCES_FILE = "SpinnerPrefs";
@@ -81,6 +82,7 @@ public class PenaltyShotView extends Activity {
 				case 2: {
 					TableLayout tl = (TableLayout) findViewById(R.id.tL02);
 					tl.setVisibility(View.VISIBLE);
+					trained = true;
 					break;
 				}
 				case 9: {
@@ -279,9 +281,11 @@ public class PenaltyShotView extends Activity {
 		Spinner restoreSpinner8 = (Spinner) findViewById(R.id.Spinner08);
 		restoreSpinner8.setSelection(getSpinnerPosition(8));
 		
-		// hide the ask menu
-		TableLayout tl = (TableLayout) findViewById(R.id.tL02);
-		tl.setVisibility(View.INVISIBLE);
+		if(!trained) {
+			// hide the ask menu
+			TableLayout tl = (TableLayout) findViewById(R.id.tL02);
+			tl.setVisibility(View.INVISIBLE);
+		}
 	}
 
 	@Override
