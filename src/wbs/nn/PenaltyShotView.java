@@ -18,7 +18,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TableLayout;
@@ -79,9 +78,7 @@ public class PenaltyShotView extends Activity {
 				}
 				case 2: {
 					TableLayout tl = (TableLayout) findViewById(R.id.tL02);
-					LinearLayout ll = (LinearLayout) findViewById(R.id.configure);
 					tl.setVisibility(View.VISIBLE);
-					ll.setVisibility(View.VISIBLE);
 					break;
 				}
 				case 9: {
@@ -104,74 +101,58 @@ public class PenaltyShotView extends Activity {
 		
 		//1
 		Spinner spinner1 = (Spinner) findViewById(R.id.Spinner01);
-		this.mAdapter1 = ArrayAdapter.createFromResource(this, R.array.Anlauflaenge,
-				android.R.layout.select_dialog_singlechoice);
+		this.mAdapter1 = ArrayAdapter.createFromResource(this, R.array.Anlauflaenge, android.R.layout.simple_spinner_dropdown_item);
 		spinner1.setAdapter(this.mAdapter1);
-		OnItemSelectedListener spinnerListener1 = new myOnItemSelectedListener(
-				this, this.mAdapter1);
+		OnItemSelectedListener spinnerListener1 = new myOnItemSelectedListener(this, this.mAdapter1);
 		spinner1.setOnItemSelectedListener(spinnerListener1);
 		
 		//2
 		Spinner spinner2 = (Spinner) findViewById(R.id.Spinner02);
-		this.mAdapter2 = ArrayAdapter.createFromResource(this, R.array.Richtung,
-				android.R.layout.select_dialog_singlechoice);
+		this.mAdapter2 = ArrayAdapter.createFromResource(this, R.array.Richtung, android.R.layout.simple_spinner_dropdown_item);
 		spinner2.setAdapter(this.mAdapter2);
-		OnItemSelectedListener spinnerListener2 = new myOnItemSelectedListener(
-				this, this.mAdapter2);
+		OnItemSelectedListener spinnerListener2 = new myOnItemSelectedListener(this, this.mAdapter2);
 		spinner2.setOnItemSelectedListener(spinnerListener2);
 		
 		//3
 		Spinner spinner3 = (Spinner) findViewById(R.id.Spinner03);
-		this.mAdapter3 = ArrayAdapter.createFromResource(this, R.array.Verzoegerung,
-				android.R.layout.select_dialog_singlechoice);
+		this.mAdapter3 = ArrayAdapter.createFromResource(this, R.array.Verzoegerung, android.R.layout.simple_spinner_dropdown_item);
 		spinner3.setAdapter(this.mAdapter3);
-		OnItemSelectedListener spinnerListener3 = new myOnItemSelectedListener(
-				this, this.mAdapter3);
+		OnItemSelectedListener spinnerListener3 = new myOnItemSelectedListener(this, this.mAdapter3);
 		spinner3.setOnItemSelectedListener(spinnerListener3);
 		
 		//4
 		Spinner spinner4 = (Spinner) findViewById(R.id.Spinner04);
-		this.mAdapter4 = ArrayAdapter.createFromResource(this, R.array.Gefoult,
-				android.R.layout.select_dialog_singlechoice);
+		this.mAdapter4 = ArrayAdapter.createFromResource(this, R.array.Gefoult, android.R.layout.simple_spinner_dropdown_item);
 		spinner4.setAdapter(this.mAdapter4);
-		OnItemSelectedListener spinnerListener4 = new myOnItemSelectedListener(
-				this, this.mAdapter4);
+		OnItemSelectedListener spinnerListener4 = new myOnItemSelectedListener(this, this.mAdapter4);
 		spinner4.setOnItemSelectedListener(spinnerListener4);
 		
 		//5
 		Spinner spinner5 = (Spinner) findViewById(R.id.Spinner05);
-		this.mAdapter5 = ArrayAdapter.createFromResource(this, R.array.Ort,
-				android.R.layout.select_dialog_singlechoice);
+		this.mAdapter5 = ArrayAdapter.createFromResource(this, R.array.Ort, android.R.layout.simple_spinner_dropdown_item);
 		spinner5.setAdapter(this.mAdapter5);
-		OnItemSelectedListener spinnerListener5 = new myOnItemSelectedListener(
-				this, this.mAdapter5);
+		OnItemSelectedListener spinnerListener5 = new myOnItemSelectedListener(this, this.mAdapter5);
 		spinner5.setOnItemSelectedListener(spinnerListener5);
 		
 		//6
 		Spinner spinner6 = (Spinner) findViewById(R.id.Spinner06);
-		this.mAdapter6 = ArrayAdapter.createFromResource(this, R.array.Kurve,
-				android.R.layout.select_dialog_singlechoice);
+		this.mAdapter6 = ArrayAdapter.createFromResource(this, R.array.Kurve, android.R.layout.simple_spinner_dropdown_item);
 		spinner6.setAdapter(this.mAdapter6);
-		OnItemSelectedListener spinnerListener6 = new myOnItemSelectedListener(
-				this, this.mAdapter6);
+		OnItemSelectedListener spinnerListener6 = new myOnItemSelectedListener(this, this.mAdapter6);
 		spinner6.setOnItemSelectedListener(spinnerListener6);
 		
 		//7
 		Spinner spinner7 = (Spinner) findViewById(R.id.Spinner07);
-		this.mAdapter7 = ArrayAdapter.createFromResource(this, R.array.Wichtig,
-				android.R.layout.select_dialog_singlechoice);
+		this.mAdapter7 = ArrayAdapter.createFromResource(this, R.array.Wichtig, android.R.layout.simple_spinner_dropdown_item);
 		spinner7.setAdapter(this.mAdapter7);
-		OnItemSelectedListener spinnerListener7 = new myOnItemSelectedListener(
-				this, this.mAdapter2);
+		OnItemSelectedListener spinnerListener7 = new myOnItemSelectedListener(this, this.mAdapter7);
 		spinner7.setOnItemSelectedListener(spinnerListener7);
 		
 		//8
 		Spinner spinner8 = (Spinner) findViewById(R.id.Spinner08);
-		this.mAdapter8 = ArrayAdapter.createFromResource(this, R.array.Zuschauer,
-				android.R.layout.select_dialog_singlechoice);
+		this.mAdapter8 = ArrayAdapter.createFromResource(this, R.array.Zuschauer, android.R.layout.simple_spinner_dropdown_item);
 		spinner8.setAdapter(this.mAdapter8);
-		OnItemSelectedListener spinnerListener8 = new myOnItemSelectedListener(
-				this, this.mAdapter8);
+		OnItemSelectedListener spinnerListener8 = new myOnItemSelectedListener(this, this.mAdapter8);
 		spinner8.setOnItemSelectedListener(spinnerListener8);
 		
 		//hiddenNodes, default_epsilon, default_learningRate
@@ -259,29 +240,27 @@ public class PenaltyShotView extends Activity {
 		Spinner restoreSpinner2 = (Spinner) findViewById(R.id.Spinner02);
 		restoreSpinner2.setSelection(getSpinnerPosition(2));
 		
-		Spinner restoreSpinner3 = (Spinner) findViewById(R.id.Spinner02);
+		Spinner restoreSpinner3 = (Spinner) findViewById(R.id.Spinner03);
 		restoreSpinner3.setSelection(getSpinnerPosition(3));
 		
-		Spinner restoreSpinner4 = (Spinner) findViewById(R.id.Spinner02);
+		Spinner restoreSpinner4 = (Spinner) findViewById(R.id.Spinner04);
 		restoreSpinner4.setSelection(getSpinnerPosition(4));
 		
-		Spinner restoreSpinner5 = (Spinner) findViewById(R.id.Spinner02);
+		Spinner restoreSpinner5 = (Spinner) findViewById(R.id.Spinner05);
 		restoreSpinner5.setSelection(getSpinnerPosition(5));
 		
-		Spinner restoreSpinner6 = (Spinner) findViewById(R.id.Spinner02);
+		Spinner restoreSpinner6 = (Spinner) findViewById(R.id.Spinner06);
 		restoreSpinner6.setSelection(getSpinnerPosition(6));
 		
-		Spinner restoreSpinner7 = (Spinner) findViewById(R.id.Spinner02);
+		Spinner restoreSpinner7 = (Spinner) findViewById(R.id.Spinner07);
 		restoreSpinner7.setSelection(getSpinnerPosition(7));
 		
-		Spinner restoreSpinner8 = (Spinner) findViewById(R.id.Spinner02);
+		Spinner restoreSpinner8 = (Spinner) findViewById(R.id.Spinner08);
 		restoreSpinner8.setSelection(getSpinnerPosition(8));
 		
-		// hide the ask menu & the configure menu 
+		// hide the ask menu
 		TableLayout tl = (TableLayout) findViewById(R.id.tL02);
-		LinearLayout ll = (LinearLayout) findViewById(R.id.configure);
-		tl.setVisibility(View.GONE);
-		ll.setVisibility(View.GONE);
+		tl.setVisibility(View.INVISIBLE);
 	}
 
 	@Override
@@ -340,7 +319,7 @@ public class PenaltyShotView extends Activity {
 		epsilon.setText(p.getString("Epsilon", "1.0"));
 		learningRate.setText(p.getString("LearningRate", "0.0"));
 		
-		return (p.contains(POSITION_KEY));
+		return (p.contains(POSITION_KEY + "1"));
 	}
 
 	public boolean writeInstanceState(Context c) {
@@ -355,23 +334,23 @@ public class PenaltyShotView extends Activity {
 		e.putInt(POSITION_KEY + "2", this.mPos2);
 		e.putString(SELECTION_KEY + "2", this.mSelection2);
 		
-		e.putInt(POSITION_KEY + "3", this.mPos2);
-		e.putString(SELECTION_KEY + "3", this.mSelection2);
+		e.putInt(POSITION_KEY + "3", this.mPos3);
+		e.putString(SELECTION_KEY + "3", this.mSelection3);
 		
-		e.putInt(POSITION_KEY + "4", this.mPos2);
-		e.putString(SELECTION_KEY + "4", this.mSelection2);
+		e.putInt(POSITION_KEY + "4", this.mPos4);
+		e.putString(SELECTION_KEY + "4", this.mSelection4);
 		
-		e.putInt(POSITION_KEY + "5", this.mPos2);
-		e.putString(SELECTION_KEY + "5", this.mSelection2);
+		e.putInt(POSITION_KEY + "5", this.mPos5);
+		e.putString(SELECTION_KEY + "5", this.mSelection5);
 		
-		e.putInt(POSITION_KEY + "6", this.mPos2);
-		e.putString(SELECTION_KEY + "6", this.mSelection2);
+		e.putInt(POSITION_KEY + "6", this.mPos6);
+		e.putString(SELECTION_KEY + "6", this.mSelection6);
 		
-		e.putInt(POSITION_KEY + "7", this.mPos2);
-		e.putString(SELECTION_KEY + "7", this.mSelection2);
+		e.putInt(POSITION_KEY + "7", this.mPos7);
+		e.putString(SELECTION_KEY + "7", this.mSelection7);
 		
-		e.putInt(POSITION_KEY + "8", this.mPos2);
-		e.putString(SELECTION_KEY + "8", this.mSelection2);
+		e.putInt(POSITION_KEY + "8", this.mPos8);
+		e.putString(SELECTION_KEY + "8", this.mSelection8);
 		
 		//persist the edit text fields
 		TextView filePath = (TextView) findViewById(R.id.filePath);
@@ -393,7 +372,8 @@ public class PenaltyShotView extends Activity {
 		else if (i == 5) return this.mPos5;
 		else if (i == 6) return this.mPos6;
 		else if (i == 7) return this.mPos7;
-		else             return this.mPos8;
+		else if (i == 8) return this.mPos8;
+		else			 return 0;
 	}
 	
 	public void start(View v) {

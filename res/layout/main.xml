@@ -31,7 +31,7 @@
     <View
           android:layout_width="fill_parent"
           android:layout_height="1dip"
-          android:background="#44444400"
+          android:background="#33333300"
           android:layout_marginLeft="6dip"
           android:layout_marginRight="6dip"
           android:layout_marginTop="3dip"
@@ -40,7 +40,7 @@
     
     <ProgressBar android:id="@+id/progressBar1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:visibility="gone"></ProgressBar>
     
-    <TableLayout android:id="@+id/tL02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:visibility="gone">
+    <TableLayout android:id="@+id/tL02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:visibility="invisible">
       <TableRow android:id="@+id/tR02" android:layout_width="wrap_content" android:layout_height="wrap_content">
         <Button android:id="@+id/ask" android:layout_width="100dip" android:layout_height="40dip" android:text="ask" android:onClick="ask"></Button>
         <TextView android:id="@+id/result" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="" android:layout_marginLeft="60dip"></TextView>
@@ -50,7 +50,7 @@
     <View
           android:layout_width="fill_parent"
           android:layout_height="1dip"
-          android:background="#44444400"
+          android:background="#33333300"
           android:layout_marginLeft="6dip"
           android:layout_marginRight="6dip"
           android:layout_marginTop="3dip"
@@ -58,7 +58,7 @@
     </View>
     
     <ScrollView android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <LinearLayout android:id="@+id/configure" android:layout_height="fill_parent" android:layout_width="fill_parent" android:visibility="visible">
+        <LinearLayout android:id="@+id/configure" android:layout_height="fill_parent" android:layout_width="fill_parent">
             <TableLayout android:stretchColumns="0" android:id="@+id/tableLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
                     <TextView android:text="Anlauflänge" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
