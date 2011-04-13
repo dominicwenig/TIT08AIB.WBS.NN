@@ -277,8 +277,10 @@ public class PenaltyShotView extends Activity {
 		Spinner restoreSpinner8 = (Spinner) findViewById(R.id.Spinner02);
 		restoreSpinner8.setSelection(getSpinnerPosition(8));
 		
-		// hide the configure menu
+		// hide the ask menu & the configure menu 
+		TableLayout tl = (TableLayout) findViewById(R.id.tL02);
 		LinearLayout ll = (LinearLayout) findViewById(R.id.configure);
+		tl.setVisibility(View.GONE);
 		ll.setVisibility(View.GONE);
 	}
 

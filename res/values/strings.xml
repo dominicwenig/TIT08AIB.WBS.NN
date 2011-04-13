@@ -12,7 +12,7 @@
     <string-array name="Richtung">
         <item>vonLinks</item>
         <item>mitte</item>
-        <item>vonRecht</item>
+        <item>vonRechts</item>
     </string-array>
     <string name="Richtung_prompt">Auswahl Richtung</string>
     

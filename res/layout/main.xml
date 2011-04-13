@@ -31,7 +31,7 @@
     <View
           android:layout_width="fill_parent"
           android:layout_height="1dip"
-          android:background="#66666610"
+          android:background="#44444400"
           android:layout_marginLeft="6dip"
           android:layout_marginRight="6dip"
           android:layout_marginTop="3dip"
@@ -43,14 +43,14 @@
     <TableLayout android:id="@+id/tL02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:visibility="gone">
       <TableRow android:id="@+id/tR02" android:layout_width="wrap_content" android:layout_height="wrap_content">
         <Button android:id="@+id/ask" android:layout_width="100dip" android:layout_height="40dip" android:text="ask" android:onClick="ask"></Button>
-        <TextView android:id="@+id/result" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="result" android:layout_marginLeft="60dip"></TextView>
+        <TextView android:id="@+id/result" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="" android:layout_marginLeft="60dip"></TextView>
       </TableRow>
     </TableLayout>
     
     <View
           android:layout_width="fill_parent"
           android:layout_height="1dip"
-          android:background="#66666610"
+          android:background="#44444400"
           android:layout_marginLeft="6dip"
           android:layout_marginRight="6dip"
           android:layout_marginTop="3dip"
