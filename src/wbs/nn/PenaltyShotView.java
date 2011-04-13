@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -92,6 +94,25 @@ public class PenaltyShotView extends Activity {
 			}
 		}
 	};
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		menu.add(0, 0, 0, "Exit");
+		menu.getItem(0).setIcon(android.R.drawable.ic_menu_close_clear_cancel);		
+		return super.onCreateOptionsMenu(menu);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case 0: {
+				android.os.Process.killProcess(android.os.Process.myPid());
+			}
+	    	default: {
+	    		return super.onOptionsItemSelected(item);
+	    	}
+	    }
+	}
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
